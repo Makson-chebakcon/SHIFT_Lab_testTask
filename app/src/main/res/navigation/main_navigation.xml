@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/listNoteFragment">
+
+    <fragment
+        android:id="@+id/listNoteFragment"
+        android:name="com.example.shift_lab_testexeption.presentation.fragment.ListNoteFragment"
+        android:label="fragment_list_note"
+        tools:layout="@layout/fragment_list_note" >
+        <action
+            android:id="@+id/action_listNoteFragment_to_viewNoteFragment"
+            app:destination="@id/viewNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewNoteFragment"
+        android:name="com.example.shift_lab_testexeption.presentation.fragment.ViewNoteFragment"
+        android:label="fragment_view_note"
+        tools:layout="@layout/fragment_view_note" >
+        <action
+            android:id="@+id/action_viewNoteFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment" />
+    </fragment>
+</navigation>
